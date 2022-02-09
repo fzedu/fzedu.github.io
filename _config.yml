@@ -1,0 +1,26 @@
+# description
+title: Fuzzy Education
+lang: "ru_RU"
+description: >- 
+  Руководства и туториалы.
+baseurl: "" 
+url: "" 
+github_username: fzedu
+
+# build settings
+markdown: kramdown
+remote_theme: L-Nafaryus/jekyll-theme-rocket@v0.0.3
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+exclude:
+  - environments/
+  - scripts/
+
+
+defaults:
+- scope:
+    path: "README.md"
+  values:
+    layout: default
+    permalink: "/"

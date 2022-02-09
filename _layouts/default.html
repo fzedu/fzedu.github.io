@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        {% seo %}
+        <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        {% include head-custom.html %}
+
+        <link rel="icon" type="image/png" href="{{ '/assets/images/fzedu-logo-light.png' | relative_url }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <a id="logo" href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/fzedu-logo-light.png' | relative_url }}" width="48" height="48">
+                </a>
+                
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="main">
+                    <a href="{{ '/' | relative_url }}">Home</a>
+                    <a href="{{ site.github.repository_url }}">GitHub</a>
+                </nav>
+
+                <div class="centered banner">
+                    <h1>{{ site.title | default: site.github.repository_name }}</h1>
+                    <h2>{{ site.description }}</h2>
+                </div>
+            </div>
+        </header>
+
+        <!--<section class="grid light">
+            <article>
+                
+            </article>
+        </section>-->
+
+        <section class="features">
+            <div class="container">
+                <div class="centered">
+                    <h2>Полный список гайдов</h2>
+                    <h4>Исследуйте интересующую вас область</h4>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col centered tight">
+                    <img src="{{ '/assets/images/python-logo.png' | relative_url }}" width="64" height="64">
+                    <h3 class="blue">Python</h3>
+                    <figcaption class="wide">
+                        Руководство по программированию на языке Python.
+                    </figcaption>
+                    <a class="button inverted small blue" href="{{ '/python-edu' | relative_url }}">Learn More</a>
+                </div>
+                <div class="col centered tight">
+                    <img src="{{ '/assets/images/git-logo.png' | relative_url }}" width="64" height="64">
+                    <h3 class="red">Git</h3>
+                    <figcaption class="wide">
+                        Руководство по использованию системы контроля версий Git.
+                    </figcaption>
+                    <a class="button inverted small red">In progress</a>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col centered tight">
+                    <img src="{{ '/assets/images/conda-logo.png' | relative_url }}" width="64" height="64">
+                    <h3 class="green">Conda</h3>
+                    <figcaption class="wide">
+                        Руководство по использованию системы управления пакетами и виртуальными окружениями Conda.
+                    </figcaption>
+                    <a class="button inverted small green">In progress</a>
+                </div>
+                <div class="col centered tight"></div>
+            </div>
+        </section>
+
+        <footer class="grid light">
+            <div class="container">
+                <div class="col">
+                    Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+                </div>
+                <div class="col text-right mobile-hide">
+                    <a href="#">Back to top Δ</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
